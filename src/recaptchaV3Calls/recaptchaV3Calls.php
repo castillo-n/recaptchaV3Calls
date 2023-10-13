@@ -38,14 +38,14 @@ class recaptchaV3
         
         //the captcha pass the verification and return a score, lets check if their score is something you approved
         if ($response->success==true && $response->score <= $score) {
-            return ['success'=> false, 'error'=>'score is too low']
+            return ['success'=> false, 'error'=>'score is too low'];
         }
         return ['success'=> true, 'error'=>''];
     }
     public static function jsCallInsert($key=null){
         $secret_key = getenv('GOOGLE_RECAPTCHA_KEY');
         if ($key === null) {
-            $key = $secret_key
+            $key = $secret_key;
         }
         echo "<script src='https://www.google.com/recaptcha/api.js?render=".$key."'></script>".
             "<script>".
