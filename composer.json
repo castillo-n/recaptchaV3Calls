@@ -1,5 +1,5 @@
 {
-  "name": "castillo-n/recaptchaV3Calls",
+  "name": "castillo-n/recaptcha-v3calls",
   "description": "Three calls, two on the front end, (one for the js, one for the element), and one to verify the recaptcha in the backend",
   "homepage": "https://github.com/castillo-n/recaptchaV3Calls",
   "type": "library",
