@@ -34,7 +34,7 @@ class recaptchaV3
           );
           $siteVerification = json_decode($siteVerification);
           if ($siteVerification->success === false) {
-            return ['success'=> false, 'error'=>'the recaptcha didn\'t pass google verification'];
+            return ['success'=> false, 'error'=>'the recaptcha didn\'t pass google verification, or the time between the recaptcha verification and the submission of the form was longer than two minutes.'];
           }
     }
     
