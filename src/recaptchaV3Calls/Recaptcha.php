@@ -5,9 +5,9 @@
 * 2022-10-13
 */
 
-namespace recaptchaV3Calls;
+namespace RecaptchaV3Calls;
 
-class recaptchaV3
+class Recaptcha
 {
     public static function backendPHPVerificationCall($captcha = null, $score_val=0.8) {
         //if you dont have GOOGLE_RECAPTCHA_SECRET set on your .env file, please add it and this will start working
