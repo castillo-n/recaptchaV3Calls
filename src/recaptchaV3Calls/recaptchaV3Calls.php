@@ -23,23 +23,25 @@ class recaptchaV3
           $captcha = false;
       }
       //captcha doesnt exists or is to short deny validity of the captcha. 
-      if (!$captcha or strlen($captcha) < 20 ) {
-          return false;
+      if (!$captcha){
+          return ['success'=> false, 'error'=>'you didn\'t pass a captcha or the g-recaptcha-response exists'];
+      }
+      else if(strlen($captcha) < 20 ) {
+          return ['success'=> false, 'error'=>'the captcha input captured was a string to short to be valid'];
       } else {
           $siteVerification = file_get_contents(
               "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']
           );
           $siteVerification = json_decode($siteVerification);
-        
           if ($siteVerification->success === false) {
-            return false;
+            return ['success'=> false, 'error'=>'the recaptcha didn\'t pass google verification'];
           }
     }
     
     //the captcha pass the verification and return a score, lets check if their score is something you approved
     if ($response->success==true && $response->score <= $score) {
-      return false;
+            return ['success'=> false, 'error'=>'score is too low']
     }
-    return true;
+    return ['success'=> true, 'error'=>''];
   }
 }
