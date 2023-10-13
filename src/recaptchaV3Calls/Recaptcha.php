@@ -24,7 +24,7 @@ class Recaptcha
         }
         //captcha doesnt exists or is to short deny validity of the captcha. 
         if (!$captcha){
-            return ['success'=> false, 'error'=>'you didn\'t pass a captcha or the g-recaptcha-response exists'];
+            return ['success'=> false, 'error'=>'you didn\'t pass a captcha or the g-recaptcha-response does not exist'];
         }
         else if(strlen($captcha) < 20 ) {
             return ['success'=> false, 'error'=>'the captcha input captured was a string to short to be valid'];
