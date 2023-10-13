@@ -42,7 +42,7 @@ class recaptchaV3
         }
         return ['success'=> true, 'error'=>''];
     }
-    public static function jsCall($key=null){
+    public static function jsCallInsert($key=null){
         $secret_key = getenv('GOOGLE_RECAPTCHA_KEY');
         if ($key === null) {
             $key = $secret_key
@@ -56,5 +56,7 @@ class recaptchaV3
             "            });".
             "    });".
             "</script>";
+    }
+    public static function htmlInsideTheFormCallInsert($key=null){
     }
 }
