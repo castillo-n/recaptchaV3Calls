@@ -19,7 +19,7 @@
     },
     "autoload": {
       "psr-4": {
-        "RecaptchaV3Calls\\": "src/recaptchaV3Calls"
+        "RecaptchaV3Calls\\": "src/Recaptcha"
       }
     }
 }
