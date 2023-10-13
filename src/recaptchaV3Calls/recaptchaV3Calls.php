@@ -60,6 +60,6 @@ class recaptchaV3
     public static function htmlInsideTheFormCallInsert($key=null){
         //you don't really need to add this code to your page, you can just copy and paste the code and be good. 
         echo "<input type='hidden' id='g-recaptcha-response' name='g-recaptcha-response'>".
-        '<input type='hidden' name='action' value='validate_captcha'>";
+        "<input type='hidden' name='action' value='validate_captcha'>";
     }
 }
