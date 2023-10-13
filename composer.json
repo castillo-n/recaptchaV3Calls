@@ -1,0 +1,25 @@
+{
+  "name": "castillo-n/recaptchaV3Calls",
+  "description": "Three calls, two on the front end, (one for the js, one for the element), and one to verify the recaptcha in the backend",
+  "homepage": "https://github.com/castillo-n/recaptchaV3Calls",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Nelson & whomever wrote the google documentation as I just followed that",
+          "homepage": "https://castillonelson.com"
+      }
+  ],
+  "support": {
+    "issues": "https://github.com/castillo-n/recaptchaV3Calls/issues"
+  },
+  "minimum-stability": "dev",
+  "require": {
+      "php": ">=5.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "RecaptchaV3Calls\\": "src/castillo-n/recaptchaV3Calls"
+      }
+    },
+}
