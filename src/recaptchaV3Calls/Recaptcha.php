@@ -9,7 +9,7 @@ namespace RecaptchaV3Calls;
 
 class Recaptcha
 {
-    public static function backendPHPVerificationCall($captcha = '', $wantedScoreValue = 0.8)
+    public static function backendPHPVerificationCall($captcha = '', $wantedScoreValue = 0.6)
     {
         //if you dont have GOOGLE_RECAPTCHA_SECRET set on your .env file, please add it and this will start working
         $secret_key = getenv('GOOGLE_RECAPTCHA_SECRET');
