@@ -1,6 +1,11 @@
 # recaptchaV3Calls
 Making an easy out of the box calls to using googles recaptcha v3 everywhere. 
+To install it:
 
+composer require castillo-n/recaptcha-v3calls
+
+
+To use it:
 There are 3 static calls. 
 
 backendPHPVerificationCall
